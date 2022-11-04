@@ -59,9 +59,9 @@ COUNTYFP	NEVER	RARELY	SOMETIMES	FREQUENTLY	ALWAYS
 ```
 
 ## Repo structure
-----------
-bash
-.
+
+```bash
+
 ├── Data512-part1.ipynb
 ├── README.md
 ├── LICENSE
@@ -78,7 +78,7 @@ bash
 │   ├── Second_order_differencing_of_Infection_Rate'.jpeg
 │   ├── Second order difference of the numner of COVID cases daily.jpeg
 
-
+```
 ## Output files
 
 The example of screenshots from the analysis:
