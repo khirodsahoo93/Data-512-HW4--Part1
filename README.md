@@ -26,33 +26,37 @@ Special Considerations:
 
 ### INPUT
 
-
-A sample response from ORES looks like this:
+A sample table from the confirmed cases data `RAW_us_confirmed_cases.csv ` :
 ```sh
-{'1013838830': {'articlequality': {'score': {'prediction': 'Stub',
-    'probability': {'B': 0.017602679257176707,
-     'C': 0.03741549736464354,
-     'FA': 0.00349656390489947,
-     'GA': 0.008839274681301947,
-     'Start': 0.24961539813724162,
-     'Stub': 0.6830305866547366}}}},
- '1033383351': {'articlequality': {'score': {'prediction': 'Stub',
-    'probability': {'B': 0.021928761381999028,
-     'C': 0.04943781016566443,
-     'FA': 0.0035527880394051643,
-     'GA': 0.009155740156955146,
-     'Start': 0.31749875536115607,
-     'Stub': 0.5984261448948202}}}},
- '1038918070': {'articlequality': {'score': {'prediction': 'Start',
-    'probability': {'B': 0.06715520305413866,
-     'C': 0.3042686926269415,
-     'FA': 0.0061228301001578925,
-     'GA': 0.015611183313679508,
-     'Start': 0.5748880583707174,
-     'Stub': 0.03195403253436519}}}}
-     }
+Province_State	Admin2	UID	        iso2	iso3	code3	FIPS	Country_Region	Lat	        Long_	...	10/22/22	
+Alabama	        Autauga	84001001	US	    USA	    840	    1001.0	US	            32.539527	-86.644082	...	18480	
+Alabama	        Baldwin	84001003	US	    USA	    840	    1003.0	US	            30.727750	-87.722071	...	65895	
+Alabama	        Barbour	84001005	US	    USA	    840	    1005.0	US	            31.868263	-85.387129	...	6926	
+Alabama	        Bibb	84001007	US	    USA	    840	    1007.0	US	            32.996421	-87.125115	...	7560		
+Alabama	        Blount	84001009	US	    USA	    840	    1009.0	US	            33.982109	-86.567906	...	17286		
 ```
 
+A sample table from the `Mask mandate Dataset` :
+
+```sh
+State_Tribe_Territory	County_Name	        FIPS_State	FIPS_County	date	order_code	Face_Masks_Required_in_Public	Source_of_Action	URL	Citation
+OH	                     Hamilton County	39	        61	        4/15/2020	2	    NaN	                            NaN	                NaN	NaN
+OH	                     Hamilton County	39	        61	        4/16/2020	2	    NaN	                            NaN	                NaN	NaN
+OH	                     Hamilton County	39	        61	        4/10/2020	2	    NaN	                            NaN	                NaN	NaN
+OH	                     Hamilton County	39	        61	        4/11/2020	2	    NaN	                            NaN	                NaN	NaN
+
+```
+
+A sample table from the `Mask compliance survey dataset`:
+
+```sh
+COUNTYFP	NEVER	RARELY	SOMETIMES	FREQUENTLY	ALWAYS
+0	        1001	0.053	0.074	0.134	0.295	0.444
+1	        1003	0.083	0.059	0.098	0.323	0.436
+2	        1005	0.067	0.121	0.120	0.201	0.491
+3	        1007	0.020	0.034	0.096	0.278	0.572
+4	        1009	0.053	0.114	0.180	0.194	0.45
+```
 ## Output files
 
 `wp_countries-no_match.txt` - This file contains the names of the politicians for which no response was found.
